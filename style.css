@@ -79,7 +79,7 @@ nav ul li a {
 
 
 nav ul li a:hover {
-    font-size: 1.04rem;
+    font-size: 1rem;
     color: rgb(224, 219, 219);
 
 }
@@ -98,7 +98,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 10vh 0;
+    margin: 8rem 0 0 0;
 
 }
 
@@ -217,7 +217,7 @@ nav ul li a:hover {
     }
     .leftsection{
         font-size: 2rem;
-        margin:0;
+        margin:10vh 0;
     }
     .firstsection>div{
         width:90%;
@@ -226,9 +226,9 @@ nav ul li a:hover {
         display: none;
         
     }
-    .box{
+    /* .box{
         display: none !important;
-    }
+    } */
 /* this code is for work experience */
 
 
@@ -292,10 +292,11 @@ hr {
 }
 
 .secondsection {
-    margin: auto;
-    max-width: 80vw;
+    margin: 20px;
+    /* max-width: 80vw; */
     padding: 10px;
     height: 80vh;
+    font-size: 1rem;
 }
 
 .secondsection h1 {
@@ -304,46 +305,47 @@ hr {
 
 .secondsection .box {
     height: 2px;
-    background-color: #ffffff;
-    margin: 56px 0;
+    background-color: #928484;
+    margin: 22px -10px;
     display: flex;
+    flex-direction: column;
+    /* align-items: center; */
     justify-content: space-around;
 }
-.work-experience{
+
+/* .work-experience {
     display: block;
+} */
+
+@media only screen and (min-width:768px){
+    .secondsection .box{
+        flex-direction: row;
+    }
 }
-.secondsection .vertical {
-display: block;
-    /* margin: 0 150px; */
-    height: 44px;
-    width: 1px;
+
+.vertical-line{
+    width:1.5px;
+    height: 40px;
     background-color: white;
+    margin:8px auto;
 }
-
-
-
 .vertical-title {
-    position: relative;
-    top: 40px;
-    left: -50px;
     width: 150px;
     text-align: center;
     font-size: 14px;
-
+    padding: 10px 0;
 }
 
-.vertical>img {
+/* .vertical>img {
     width: 22px;
     height: 22px;
     position: relative;
     top: -28px;
     left: -11px;
-}
+} */
 
 .vertical-desc {
-    position: relative;
-    top: 60px;
-    left: -50px;
+
     color: grey;
     width: 150px;
     font-size: 11px;
@@ -467,13 +469,31 @@ footer {
    z-index: 1;
 }
 
-
+.menu{
+    display: none;
+}
 
 
 
 
 /* ------------------------------------------------------- */
 /* About section is started from here */
+@media only screen and (max-width:768px){
+   
+    .about-section .left-side{
+        display: none;
+    }
+    .about-section .right-side{
+        width: 100%;
+        margin:10px;
+    }
+    .menu{
+        display: block;
+    }
+    .secondsection{
+        display: none;
+    }
+}
 .about-section{
     display: flex;
     justify-content: space-around;
@@ -486,6 +506,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .first-bg{
      background-color: rgb(255, 136, 0);
@@ -493,8 +514,8 @@ footer {
     width:250px;
     border-radius: 50%;
     position: absolute;
-  top:241px;
-  left:168px;
+    top: 172px;
+    left: 158px;
 }
 .second-bg{
     background-color: rgb(251, 251, 251);
@@ -502,7 +523,7 @@ footer {
   width:250px;
   border-radius: 50%;
   position: absolute;
-  top:264px;
+  top:183px;
   left:150px;
   z-index: 1;
   
@@ -511,7 +532,7 @@ footer {
     height:200px;
     width:200px;
     position: absolute;
-    top:288px;
+    top:210px;
     left:176px;
     z-index: 2;
     border-radius: 50%;
@@ -524,6 +545,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin-top:100px;
 }
 .right-side>h2{
     font-size: 3em;
@@ -536,4 +558,8 @@ footer {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
     padding:10px;
+}
+.right-side :nth-child(even){
+    background-color: #102a37;
+    color: rgb(200, 198, 198);
 }
